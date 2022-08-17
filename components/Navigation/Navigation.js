@@ -5,15 +5,15 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { Feather } from  '@expo/vector-icons'
 
-import {Home, Library, Settings, Player, Welcome, Auth} from '../Screens/index.js'
+import {Home, Library, Settings, Player, Welcome, Auth, PlaylistScreen} from '../Screens/index.js'
 
 
 const Stack = createStackNavigator();
 
 export function MainStack () {
   return (
-    <Stack.Navigator initialRouteName="Auth" screenOptions={{headerShown: false,}}>
-      {/* <Stack.Screen name="Welcome" component={Welcome} /> */}
+    <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerShown: false,}}>
+      <Stack.Screen name="Welcome" component={Welcome} />
       <Stack.Screen name="Auth" component={Auth} />
       <Stack.Screen name="NavStack" component={NavStack} />
     </Stack.Navigator>
@@ -31,6 +31,9 @@ function NavStack ({ navigation }) {
             elevation:0
           },
           headerTintColor: '#fff',
+      }}/>
+      <Stack.Screen name="PlaylistScreen" component={PlaylistScreen} options={{
+          headerShown: false,
       }}/>
     </Stack.Navigator>
   );
@@ -54,13 +57,13 @@ const navMenu = createBottomTabNavigator();
       }}>
           <navMenu.Screen name='Home' component={Home} options={{
              tabBarIcon:({color, size}) => (
-                <Feather name='music' color={color} size={size}/>
+                <Feather name='home' color={color} size={size}/>
               ),      
             }}
           />
           <navMenu.Screen name='library' component={Library} options={{
               tabBarIcon:({color, size}) => (
-                <Feather name='bookmark' color={color} size={size}/>
+                <Feather name='music' color={color} size={size}/>
               ),
             }}
           />         

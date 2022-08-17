@@ -1,14 +1,14 @@
 import { SafeAreaView, View} from 'react-native';
-import { MusicList,CurrentMusic, Header,Search,Title,Recommendations} from '../../modules/index.js';
+import { MusicList,CurrentMusic, Header,Search,Title,Playlists} from '../../modules/index.js';
 import {styles} from '../../modules/styles.js'
 
-  const FlatList_Header = () => {
+  const FlatList_Header = (navigation) => {
     return (
         <View>
-            <Search styles={{}}/>
+            <Search/>
+            <Title title='Playlists'/>
+            <Playlists navigation={navigation} Screen='Home' />
             <Title title='Recommendations'/>
-            <Recommendations Screen='Home' />
-            <Title title='Playlist'/>
         </View>
     );
   }
@@ -17,8 +17,8 @@ import {styles} from '../../modules/styles.js'
 export function Home({navigation}){
     return (
       <SafeAreaView style={styles.container}>
-        <Header iconName='music' name='Home'/>
-        <MusicList header={FlatList_Header} Screen='Home' />
+        <Header  name='Home'/>
+        <MusicList header={FlatList_Header(navigation)} Screen='Home' />
         <CurrentMusic navigation={navigation}/>
       </SafeAreaView>
     );

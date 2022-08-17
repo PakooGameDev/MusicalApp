@@ -13,7 +13,7 @@ import {styles} from '../../modules/styles.js'
 export function Library({navigation}){
     return (
       <SafeAreaView style={styles.container}>
-        <Header iconName='bookmark' name='Library'/>
+        <Header  name='Library'/>
         <MusicList header={FlatList_Header} Screen='Library' navigation={navigation}/>
       </SafeAreaView>
     );

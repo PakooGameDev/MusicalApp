@@ -6,7 +6,6 @@ import {Text, View, Animated} from 'react-native';
 export function Header(props) {
     return (
     <View style={styles.header}>
-        <Feather name={props.iconName} style={styles.headerItems} />
         <Text style={styles.headerItems}>{props.name}</Text>
     </View>
     );

@@ -10,7 +10,6 @@ import {
 
 
 export function SongMenu (props) {
-    if(props.ShowMenu){
         return(
             <Menu>
                 <MenuTrigger customStyles={triggerStyles}>
@@ -26,8 +25,6 @@ export function SongMenu (props) {
                 </MenuOptions>
             </Menu>
         )
-    } return(<View/>)
-    
 };
 
 

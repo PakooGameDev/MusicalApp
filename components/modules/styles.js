@@ -34,16 +34,18 @@ subHeading: {
 //---------------------------------Header----------------------------------------
 
 header:{         
-  height: 65,  
+  height: 60,  
   flexDirection: 'row',
-  alignItems:'center',
+  alignItems:'flex-end',
+  paddingBottom:5,
+  marginBottom: 20,
 },
 headerItems:{
-  color: '#fff',
+  color: 'rgba(255, 162, 0, 1)',
   paddingLeft: 25,
-  fontSize: 18,
-  fontWeight: '400',
-  textTransform: 'uppercase'
+  fontSize: 23,
+  fontWeight: '200',
+  // textTransform: 'uppercase'
 },
 
 //---------------------------------Search----------------------------------------
@@ -64,7 +66,7 @@ searchSection: {
 title:{    
   width: '90%',
   alignSelf: 'center', 
-  marginVertical: 16,
+  marginVertical: 25,
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems:'center',
@@ -80,7 +82,7 @@ songItem: {
   height: 60,
   width: '90%',
   alignSelf: 'center', 
-  marginBottom: 10,
+  marginBottom: 13,
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems:'flex-start',  
@@ -96,7 +98,7 @@ songLogo:{
 },
 songLogoRec: {
   width: 150,
-  height: 175,
+  height: 180,
   resizeMode: 'stretch',
   borderRadius:20,
   marginBottom:10,
@@ -132,10 +134,13 @@ CurrentPlayer:{
   fontSize: 24,
   color:'rgba(255, 162, 0, 1)',
   paddingRight:10,
+
 },
 
 CurrentMusic:{
-  height: 65,
+  height: 69,
+  borderTopWidth: 3,
+  borderColor:'rgba(255, 162, 0, 1)',
   backgroundColor: '#2a2e32',
   flexDirection: 'row',
   justifyContent: 'space-between',

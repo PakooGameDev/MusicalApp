@@ -1,6 +1,7 @@
 //-----------------------------------Blocks-------------------------------------------------------------
 import { Header, ValidationHeader } from './Blocks/header.js';
-import { MusicList,Recommendations } from './Blocks/Playlist.js';
+import { MusicList } from './Blocks/MusicList.js';
+import { Playlists } from "./Blocks/Playlists";
 import LoginForm from './Blocks/LogInForm.js';
 import SignUpForm from './Blocks/SignUpForm.js';
 //-----------------------------------Items-------------------------------------------------------------
@@ -12,4 +13,4 @@ import { Title } from './Text/title.js';
 //-----------------------------------Buttons-------------------------------------------------------------
 import ValidationSelectorBtn from './Buttons/ValidationSelectorBtn';
 
-export {Header,ValidationSelectorBtn, Recommendations, MusicList, CurrentMusic, Search, Title, LoginForm, SignUpForm, ValidationHeader}
+export {Header,ValidationSelectorBtn, Playlists, MusicList, CurrentMusic, Search, Title, LoginForm, SignUpForm, ValidationHeader}
