@@ -1,47 +1,18 @@
 import { FlatList} from 'react-native';
 import { Song } from '../Items/SongItem';
 
-export const data = [
-    {
-        id: '001',
-        title: "Save Save Your Tears Save Your Tears Save Your  Tears ",
-        author: 'FFDP',
-        thumbnail: require('../../../assets/songLogo.jpg'),
-        long: '4:54'
-    },
-    {
-        id: '002',
-        title: "Save Save Your Tears Save Your Tears Save Your  Tears",
-        author: 'Sabaton',
-        thumbnail: require('../../../assets/songLogo.jpg'),
-        long: '4:54'
-    },
-    {
-        id: '003',
-        title: "Save Save Your Tears Save Your Tears Save Your  Tears",
-        author: 'LinkinParkLinkinParkLinkinParkLinkinPark',
-        thumbnail: require('../../../assets/songLogo.jpg'),
-        long: '4:54'
-    },
-    {
-        id: '004',
-        title: "Save Your Tears",
-        author: 'LInkinPark',
-        thumbnail: require('../../../assets/songLogo.jpg'),
-        long: '4:54'
-    },
-]
-
 export function MusicList(props){
-    const _renderItem = ({ item}) => (
-    <Song 
-        Item={item}    
-        Screen={props.Screen} 
+    const _renderItem = ({item,index}) => (
+    <Song    
+        parentItem={{
+            Index:index,
+            Item:item,
+        }} 
     />        
     );
     return ( 
     <FlatList    
-        data={data}
+        data={props.data}
         renderItem={_renderItem}
         keyExtractor={item => item.id}
         ListHeaderComponent={props.header}
